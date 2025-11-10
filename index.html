@@ -36,9 +36,6 @@
     nav a:hover {color:#ffdd57;}
 
     /* Section Titles */
-    section {padding:80px 20px; max-width:1000px; margin:0 auto; opacity:0; transform: translateY(20px); transition: all 0.8s ease-in-out;}
-    section.visible {opacity:1; transform: translateY(0);}
-    h2 {text-align:center; margin-bottom:40px; color:#2575fc;}
     section {
         padding:80px 20px;
         max-width:1000px;
@@ -48,6 +45,8 @@
         transition: all 0.8s ease-in-out;
         scroll-margin-top: 120px; /* evita que o header tape o título */
     }
+    section.visible {opacity:1; transform: translateY(0);}
+    h2 {text-align:center; margin-bottom:40px; color:#2575fc;}
 
     /* Cards */
     .cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
@@ -99,6 +98,35 @@
     footer {text-align:center; padding:40px 20px; background:#f0f0f0; color:#333; border-top:1px solid #ddd;}
     footer a {margin:0 10px; color:#2575fc; text-decoration:none;}
     footer a:hover {color:#ff8c42;}
+
+    /* Back to Top button */
+    #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #2575fc;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    #backToTop:hover {
+        transform: translateY(-3px);
+        background: #6a11cb;
+    }
+
+    #backToTop.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
 </style>
 </head>
 <body>
@@ -168,6 +196,9 @@
     <p>Contact: <a href="mailto:manuel.neto@tecnico.ulisboa.pt">Webmail - manuel.neto@tecnico.ulisboa.pt</a> | <a href="https://github.com/ManuelPedroNeto">GitHub</a></p>
 </footer>
 
+<!-- Botão "Back to Top" -->
+<button id="backToTop" title="Go to top">↑</button>
+
 <script>
     // Scroll animation: reveal sections smoothly
     const sections = document.querySelectorAll('section');
@@ -177,6 +208,19 @@
         });
     }, {threshold: 0.2});
     sections.forEach(section => observer.observe(section));
+
+    // Back to Top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 </script>
 
 </body>
