@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manuel Neto</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    /* Reset */
+    * {margin:0; padding:0; box-sizing:border-box;}
+    html {scroll-behavior: smooth;}
+    body {font-family:'Roboto', sans-serif; background:#f9f9f9; color:#333;}
+
+    /* Header / Menu */
+    header {
+        background: linear-gradient(135deg,#6a11cb,#2575fc);
+        color:#fff;
+        padding:40px 20px;
+        text-align:center;
+        position:sticky;
+        top:0;
+        z-index:1000;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    header h1 {font-size:2.5em; margin-bottom:10px;}
+    header p {font-size:1.1em; color:#e0e0e0;}
+    nav {margin-top:15px;}
+    nav a {
+        color:#fff;
+        text-decoration:none;
+        margin:0 15px;
+        font-weight:700;
+        transition: color 0.3s;
+    }
+    nav a:hover {color:#ffdd57;}
+
+    /* Section Titles */
+    section {padding:80px 20px; max-width:1000px; margin:0 auto; opacity:0; transform: translateY(20px); transition: all 0.8s ease-in-out;}
+    section.visible {opacity:1; transform: translateY(0);}
+    h2 {text-align:center; margin-bottom:40px; color:#2575fc;}
+
+    /* Cards */
+    .cards {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+    .card {
+        background:#fff;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.1);
+        width:250px;
+        transition:transform 0.3s, box-shadow 0.3s;
+        text-align:center;
+    }
+    .card:hover {
+        transform:translateY(-5px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* About me */
+    #about p {text-align:center; max-width:700px; margin:0 auto; font-size:1.1em; line-height:1.6; color:#555;}
+
+    /* Links */
+    a {color:#2575fc; text-decoration:none; transition:color 0.3s;}
+    a:hover {color:#ff8c42;}
+
+    /* Footer */
+    footer {text-align:center; padding:40px 20px; background:#f0f0f0; color:#333; border-top:1px solid #ddd;}
+    footer a {margin:0 10px; color:#2575fc; text-decoration:none;}
+    footer a:hover {color:#ff8c42;}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Your Name</h1>
+    <p>PhD Student in Instituto Superior Técnico</p>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Welcome! My name is Manuel and I am a PhD student in Electrical and Computer Engineering at Instituto Superior Técnico and a researcher at INESC-ID, under supervision of Prof. Hugo Morais. I hold a BSc in Electrical Engineering from Instituto Superior de Engenharia de Lisboa and an MSc in Electrical and Computer Engineering from Instituto Superior Técnico.  
+        My research focuses on developing computational methods and models to introduce voltage control in power flow analysis for DC grids. Currently, I aim to design and investigate power flow approaches to integrate voltage control taking into account also computational time and accuracy.
+</s>
+Keywords: power flow analysis; iterative methods; recursive methods; voltage control.
+    </p>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>BsC in Electrical Engineering</h3>
+            <p>[Instituto Superior Técnico], [2018-2021]</p>
+        </div>
+        <div class="card">
+            <h3>MSc in Electrical and Computer Engineering</h3>
+            <p>[Instituto Superior Técnico], [2021-2023]</p>
+        </div>
+        <div class="card">
+            <h3>PhD in Electrical and Computer Engineering</h3>
+            <p>[Instituto Superior Técnico], [2024-]</p>
+        </div>
+    </div>
+</section>
+
+<section id="teaching">
+    <h2>Teaching</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Theoretical Foundations of Electrical Engineering</h3>
+            <p>Static electric fields. Stationary electric current fields. Electrostatics. Stationary currents. Magnetic field of stationary currents. Magnetic induction phenomena (rest and motion bodies). Electric induction phenomena. Lumped parameters circuit analysis (sinusoidal steady state and transient regimes). Time-varying electromagnetic field phenomena (electromagnetic waves; frequency domain). Transmission line analysis (distributed parameters). / 2022/2023-P3</p>
+        </div>
+        <div class="card">
+            <h3>Theoretical Foundations of Electrical Engineering</h3>
+            <p>Static electric fields. Stationary electric current fields. Electrostatics. Stationary currents. Magnetic field of stationary currents. Magnetic induction phenomena (rest and motion bodies). Electric induction phenomena. Lumped parameters circuit analysis (sinusoidal steady state and transient regimes). Time-varying electromagnetic field phenomena (electromagnetic waves; frequency domain). Transmission line analysis (distributed parameters). / 2023/2024-P3</p>
+        </div>
+        <div class="card">
+            <h3>Aircraft Hybrid Propulsion Systems</h3>
+            <p>Aircraft: full electric, hybrid-series, hybrid-parallel and turboelectric.Sizing of Aircraft Propulsion Systems. Requirements: load, range, cruise speed/altitude, takeoff and landing distances.Sizing the Electric Drive System. Electric motor: torque and power, constant power/speed ratio, machine sizing. Electronic converters. Energy storage system.Most Common Electric Motors for Aircrafts Propulsion. Brushless motors: DC and AC. Interior permanent magnet synchronous motors. Induction motors. Synchronous reluctance motors.Electronic Converters for AC Drives. Pulse width modulation (PWM). Space-vector PWM.Speed Control of Electrical Drives. Field oriented control (FOC). Direct torque control (DTC).Drive System Efficiency. Electric motor: core losses, copper losses and skin effects. Energy storage losses. Efficiency mapping.Energy Storage Modeling. Lithium ion batteries. Fuel cells. Supercapacitors. / 2023/2024-P4</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Position 1</h3>
+            <p>Institution, Year – Year</p>
+        </div>
+        <div class="card">
+            <h3>Position 2</h3>
+            <p>Institution, Year – Year</p>
+        </div>
+    </div>
+</section>
+
+<section id="publications">
+    <h2>Publications</h2>
+    <div class="cards">
+        <div class="card"><a href="#">Neto, M.G.; da Silva, F.F.; Branco, P.J.d.C. Operational Analysis of an Axial and Solid Double-Pole Configuration in a Permanent Magnet Flux-Switching Generator. Energies 2024, 17, 1698. https://doi.org/10.3390/en17071698</a></div>
+        <div class="card"><a href="#">Publication Title 2</a></div>
+        <div class="card"><a href="#">Publication Title 3</a></div>
+    </div>
+</section>
+
+<footer>
+    <p>Contact: <a href="mailto:youremail@example.com">youremail@example.com</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+</footer>
+
+<script>
+    // Scroll animation: reveal sections smoothly
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, {threshold: 0.2});
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
